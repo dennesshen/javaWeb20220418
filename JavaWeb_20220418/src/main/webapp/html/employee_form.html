@@ -6,7 +6,7 @@
 	<title>員工表單</title>
 </head>
 <body style="padding: 20px;" >
-	<form class="pure-form" action="/JavaWeb_20220418/servlet/employee">
+	<form class="pure-form" method="post" action="/JavaWeb_20220418/servlet/employee">
 		<fieldset>
 			<legend>員工表單</legend>
 			姓名：<input type="text" placeholder="請輸入姓名" name="employeeName" /> <p/>
@@ -27,7 +27,7 @@
 			<p/>
 			備註： <textarea  name="employeeMemo" cols="20" rows="5"> 其他備註 </textarea>
 			<p/>
-			
+			QRcode : <img alt="" src="/JavaWeb_20220418/servlet/baby/qr/image" align="middle" width="150"><p/>
 			<button type="reset" class="pure-button pure-button-primary">重置</button>
 			<button type="submit" class="pure-button pure-button-primary">
 				送出
