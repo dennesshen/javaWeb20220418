@@ -6,44 +6,6 @@
 	<title>員工表單</title>
 </head>
 <body style="padding: 20px;" >
-	<form class="pure-form" action="/JavaWeb_20220418/servlet/employee">
-		<fieldset>
-			<legend>員工表單</legend>
-			姓名：<input type="text" placeholder="請輸入姓名" name="employeeName" /> <p/>
-			年齡： <input type="number" name="employeeAge" /><p/>
-			性別： <input type="radio" name="employeeSex" value="Male" checked /> 男
-				   <input type="radio" name="employeeSex" value="Female" /> 女<p/>
-			階級：<select name="employeePosition">
-					<option value="專員">專員</option>
-					<option value="工程師">工程師</option>
-					<option value="經理">經理</option>
-				  </select><p/>
-			生日： <input type="date" name="employeeBirth" /><p/>
-			語言： <input type="checkbox" name="employeeLanguage" value="C" /> C
-				   <input type="checkbox" name="employeeLanguage" value="Java" /> Java
-				   <input type="checkbox" name="employeeLanguage" value="Python" /> Python
-				   <input type="checkbox" name="employeeLanguage" value="VB" /> VB
-				   <input type="checkbox" name="employeeLanguage" value="Cobol" /> Cobol
-			<p/>
-			備註： <textarea  name="employeeMemo" cols="20" rows="5"> 其他備註 </textarea>
-			<p/>
-			
-			<button type="reset" class="pure-button pure-button-primary">重置</button>
-			<button type="submit" class="pure-button pure-button-primary">
-				送出
-			</button>
-		</fieldset>
-	</form>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" />
-	<meta charset="UTF-8">
-	<title>員工表單</title>
-</head>
-<body style="padding: 20px;" >
 	<form class="pure-form" method="post" action="/JavaWeb_20220418/servlet/employee">
 		<fieldset>
 			<legend>員工表單</legend>
