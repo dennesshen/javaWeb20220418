@@ -18,9 +18,7 @@ public class EmployeeServlet extends HttpServlet{
 		req.setCharacterEncoding("UTF-8");
 		
 		//verified 驗證
-		if () {
-			
-		}
+		
 		
 		req.getParameterMap().entrySet().forEach(e ->System.out.println(e.getKey() +" : " + Arrays.toString(e.getValue())));
 		resp.setContentType("text/html; charset=UTF-8");

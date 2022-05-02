@@ -1,26 +1,13 @@
 package service;
 
-class Error{
-	public Integer errorCode;
-	public String errorMassage;
-}
 
-public class EmployeeValidator {
-	private static final EmployeeValidator instance = new EmployeeValidator();
-	private Error error;
-	private EmployeeValidator() {
-	}
+
+public class EmployeeValidator extends Validator{
 	
-	public static EmployeeValidator getInstance() {
-		return instance;
-	}
-	
-	public void name() {
+
+	@Override
+	public void validate(Object target, Error error) {
 		
-	}
-	
-	public boolean hasError() {
-		return error == null ? true : false;
 	}
 	
 }
