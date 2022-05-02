@@ -20,7 +20,7 @@ public class AreaServlet extends HttpServlet{
 		resp.getWriter().write(String.format("圓面積 : %.2f <p/>", area));
 		resp.getWriter().write(String.format("球體積: %.2f <p/>", volume));
 		
-		
+		System.out.println("");
 	}
 	
 	@Override
