@@ -1,4 +1,4 @@
-package service;
+package validator;
 
 class Error{
 	public Integer errorCode;

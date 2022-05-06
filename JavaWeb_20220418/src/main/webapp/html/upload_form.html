@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Upload Form</title>
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" />
+</head>
+<body style="padding: 20px">
+	<form action="/JavaWeb_20220418/servlet/upload" class="pure-form" method="post"
+		  enctype="multipart/form-data">
+		<fieldset>
+			<legend>Upload Form</legend>
+			<input type="text" name="cname" /><p/>
+			<input type="file" name="uploadFile" class="pure-button"/>
+			<p/>
+			<button type="submit" class="pure-button pure-button-primary" >上傳</button>
+		</fieldset>
+	</form>
+
+</body>
+</html>
