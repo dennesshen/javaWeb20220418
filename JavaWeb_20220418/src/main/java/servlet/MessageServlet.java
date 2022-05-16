@@ -18,8 +18,11 @@ public class MessageServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
 		String content = req.getParameter("content");
+		String stickerPackageId = req.getParameter("stickerPackageId");
+		String stickerId = req.getParameter("stickerId");
+		
 		MessageService messageService = new MessageService();
-		int httpCode = messageService.pushMessage(content);
+		int httpCode = messageService.pushMessageAndSticker(content, stickerPackageId, stickerId);
 		
 		resp.setContentType("text/html; charset=UTF-8");
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/jsp/message_result.jsp");

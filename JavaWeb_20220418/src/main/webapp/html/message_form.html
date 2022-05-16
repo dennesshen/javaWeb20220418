@@ -2,18 +2,47 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>line notify</title>
 	<link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" />
+
 </head>
 <body style="padding: 20px">
-	<form action="/JavaWeb_20220418/servlet/message" class="pure-form" method="post">
+	<form id="lineMessageForm" action="/JavaWeb_20220418/servlet/message" class="pure-form" method="post">
 		<fieldset>
 			<legend>Message Form</legend>
-			<textarea placeholder="請輸入訊息" name="content"></textarea>
-			<p/>
-			<button type="submit" class="pure-button pure-button-primary" >傳送</button>
+			
+			<textarea id="content" placeholder="請輸入訊息" name="content"></textarea><p/>
+			<input type="number" name="stickerPackageId" value="6325" />
+			<input id="stickerId" type="number" name="stickerId" value="10979907" /><p/>
+			<div>
+				<img id="previewSticker" />
+			</div>
+			<button id="sendMessageButton" type="submit" class="pure-button pure-button-primary" >傳送</button>
+			
 		</fieldset>
 	</form>
+	<script text="text/javascript">
+		let stickerId;
+		let stickerURL;
+		function addStickerId(){
+			console.log(this.value);
+			stickerId = this.value;
+			stickerURL = "https://stickershop.line-scdn.net/stickershop/v1/sticker/"+stickerId+"/android/sticker.png" ;
+			document.getElementById("previewSticker").setAttribute("src", stickerURL);
+		} 
+		document.getElementById("stickerId").addEventListener("change",addStickerId);
 
+		document.getElementById("sendMessageButton").addEventListener("click", () => {
+			console.log("test")
+			if(document.getElementById('content').value == ''){
+				document.getElementById("lineMessageForm").setAttribute("onsubmit", "return false");
+				window.alert("請輸入訊息內容");
+				document.getElementById('content').focus();
+			}else{
+				
+				document.getElementById("lineMessageForm").setAttribute("onsubmit", "return true");
+			}
+		});
+	</script>
 </body>
 </html>
