@@ -9,6 +9,13 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- session 設定 -->
+  <session-config>
+  	<session-timeout>1</session-timeout>
+  </session-config>
+  
+  
   <!-- 建立 Servlet 實體 -->
   <servlet>
   	<servlet-name>TodayServlet</servlet-name>

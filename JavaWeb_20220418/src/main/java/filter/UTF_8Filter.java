@@ -9,18 +9,12 @@ import javax.servlet.http.HttpFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter("/servlet/")
-public class WatermarkFilter extends HttpFilter{
+@WebFilter(urlPatterns = {"/report/*"})
+public class UTF_8Filter extends HttpFilter{
 	@Override
 	protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
 			throws IOException, ServletException {
-		MyResponse myResponse = new MyResponse(res);
-		chain.doFilter(req, myResponse);
-		
-		String responseHTML = myResponse.getHTMLSource();
-		responseHTML = responseHTML.replaceAll("<body", "<body bgcolor='red'");
-		res.getWriter().print(responseHTML);
-		
-		
+		res.setContentType("text/html;charset=utf8");
+		chain.doFilter(req, res);
 	}
 }
