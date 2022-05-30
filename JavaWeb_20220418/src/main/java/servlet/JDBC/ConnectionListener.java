@@ -1,4 +1,4 @@
-package servlet.DB;
+package servlet.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -19,27 +19,36 @@
 			<artifactId>javax.servlet.jsp.jstl</artifactId>
 			<version>1.2.4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.11.0</version>
 		</dependency>
-		
+
 		<!-- JDBC 連結SQLite -->
 		<dependency>
-		   <groupId>org.xerial</groupId>
-		   <artifactId>sqlite-jdbc</artifactId>
-		   <version>3.36.0.3</version>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.36.0.3</version>
 		</dependency>
-		
+
 		<!-- java faker-->
 		<dependency>
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-		
+
+		<!-- java jpa 實作 library-->
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+		<dependency>
+		    <groupId>org.eclipse.persistence</groupId>
+		    <artifactId>eclipselink</artifactId>
+		    <version>2.7.5</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<plugins>
